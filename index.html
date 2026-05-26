@@ -83,7 +83,7 @@ p{
 }
 .grid{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-columns:repeat(3,minmax(0,1fr));
   gap:18px;
 }
 .card{
@@ -95,7 +95,7 @@ p{
   border:1px solid var(--g2);
   border-radius:18px;
   padding:28px;
-  min-height:210px;
+  min-height:220px;
   overflow:hidden;
   transition:all .22s ease;
 }
@@ -153,6 +153,9 @@ p{
   color:#555;
   font-size:11px;
 }
+@media(max-width:1024px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
 @media(max-width:760px){
   body{padding:26px;overflow:auto;}
   .grid{grid-template-columns:1fr;}
@@ -168,12 +171,12 @@ p{
   <div class="eyebrow">YaJuego · Consultoría Digital 2026</div>
   <h1>Hub de <span>diagnóstico</span> y ruta digital</h1>
   <p>
-    Acceso rápido a los entregables de consultoría: ruta de pauta digital y diagnóstico inicial 
+    Acceso rápido a los entregables de consultoría: ruta de pauta digital, diagnóstico inicial 
     de performance con recomendaciones para Google, Meta y campaña de marca.
   </p>
 
   <section class="grid">
-    <a class="card" href="/Ruta.html">
+    <a class="card" href="Ruta.html">
       <div class="num">01</div>
       <h2>Ruta de Pauta Digital</h2>
       <small>
@@ -182,13 +185,22 @@ p{
       <span class="tag">Abrir /Ruta.html</span>
     </a>
 
-    <a class="card" href="/DiagnosticoInicial.html">
+    <a class="card" href="DiagnosticoInicial.html">
       <div class="num">02</div>
       <h2>Diagnóstico Inicial</h2>
       <small>
         Checklist accionable, hallazgos por KPI, conclusiones y recomendaciones para optimización.
       </small>
       <span class="tag">Abrir /DiagnosticoInicial.html</span>
+    </a>
+
+    <a class="card" href="AuditoriaKeywords.html">
+      <div class="num">03</div>
+      <h2>Auditoría de Keywords</h2>
+      <small>
+        Análisis de palabras clave, validación de términos de búsqueda y dos caminos estratégicos de optimización.
+      </small>
+      <span class="tag">Abrir /AuditoriaKeywords.html</span>
     </a>
   </section>
 
