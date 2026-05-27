@@ -1,233 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YaJuego · Hub de Consultoría</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --y:#FFC000;
-  --b:#111;
-  --w:#fff;
-  --g1:#1a1a1a;
-  --g2:#282828;
-  --g3:#777;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-  min-height:100vh;
-  font-family:'DM Sans',sans-serif;
-  background:var(--b);
-  color:var(--w);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:40px;
-  overflow:auto;
-}
-.bg-grid{
-  position:fixed;
-  inset:0;
-  background-image:
-    linear-gradient(rgba(255,192,0,0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,192,0,0.045) 1px, transparent 1px);
-  background-size:60px 60px;
-  pointer-events:none;
-}
-.blob{
-  position:fixed;
-  width:55vw;
-  height:55vw;
-  right:-18vw;
-  top:-18vw;
-  border-radius:50%;
-  background:radial-gradient(circle, rgba(255,192,0,0.16) 0%, rgba(255,192,0,0.05) 42%, transparent 70%);
-  pointer-events:none;
-}
-.wrap{
-  position:relative;
-  z-index:2;
-  width:min(980px,100%);
-}
-.eyebrow{
-  color:var(--y);
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  margin-bottom:18px;
-  display:flex;
-  gap:10px;
-  align-items:center;
-}
-.eyebrow:before{
-  content:'';
-  width:28px;
-  height:1px;
-  background:var(--y);
-}
-h1{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(42px,7vw,82px);
-  line-height:.92;
-  letter-spacing:-.05em;
-  font-weight:800;
-  margin-bottom:22px;
-}
-h1 span{color:var(--y);}
-p{
-  max-width:650px;
-  color:#aaa;
-  font-size:15px;
-  line-height:1.8;
-  margin-bottom:38px;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:18px;
-}
-.card{
-  position:relative;
-  display:block;
-  text-decoration:none;
-  color:var(--w);
-  background:rgba(26,26,26,.92);
-  border:1px solid var(--g2);
-  border-radius:8px;
-  padding:28px;
-  min-height:220px;
-  overflow:hidden;
-  transition:all .22s ease;
-}
-.card:after{
-  content:'';
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  height:4px;
-  background:var(--y);
-  transform:scaleX(.25);
-  transform-origin:left;
-  transition:transform .22s ease;
-}
-.card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(255,192,0,.5);
-  background:#1e1e1e;
-}
-.card:hover:after{transform:scaleX(1);}
-.num{
-  font-family:'Syne',sans-serif;
-  color:rgba(255,192,0,.28);
-  font-size:44px;
-  line-height:1;
-  font-weight:800;
-  margin-bottom:18px;
-}
-.card h2{
-  font-family:'Syne',sans-serif;
-  font-size:22px;
-  line-height:1.15;
-  letter-spacing:-.02em;
-  margin-bottom:12px;
-}
-.card small{
-  color:var(--g3);
-  font-size:13px;
-  line-height:1.65;
-  display:block;
-}
-.tag{
-  display:inline-flex;
-  margin-top:24px;
-  padding:6px 12px;
-  border-radius:999px;
-  background:rgba(255,192,0,.1);
-  color:var(--y);
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.footer{
-  margin-top:28px;
-  color:#555;
-  font-size:11px;
-}
-@media(max-width:1024px){
-  .grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-}
-@media(max-width:760px){
-  body{padding:26px;overflow:auto;}
-  .grid{grid-template-columns:1fr;}
-  .card{min-height:auto;}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YaJuego · Hub de Consultoría</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-<div class="bg-grid"></div>
-<div class="blob"></div>
+  <div class="bg-grid"></div>
+  <div class="blob"></div>
 
-<main class="wrap">
-  <div class="eyebrow">YaJuego · Consultoría Digital 2026</div>
-  <h1>Hub de <span>diagnóstico</span> y ruta digital</h1>
-  <p>
-    Acceso rápido a los entregables de consultoría: ruta de pauta digital, diagnóstico inicial, auditorías
-    de performance y medición con recomendaciones para Google, Meta, GTM y campaña de marca.
-  </p>
+  <main class="wrap">
+    <div class="eyebrow">YaJuego · Consultoría Digital 2026</div>
+    <h1>Hub de <span>diagnóstico</span> y ruta digital</h1>
+    <p>
+      Acceso rápido a los entregables de consultoría: ruta de pauta digital, diagnóstico inicial, auditorías
+      de performance y medición con recomendaciones para Google, Meta, GTM, GA4 y campaña de marca.
+    </p>
 
-  <section class="grid">
-    <a class="card" href="Ruta.html">
-      <div class="num">01</div>
-      <h2>Ruta de Pauta Digital</h2>
-      <small>
-        Navega la ruta estratégica de medios, objetivos, estructura y lineamientos de pauta digital.
-      </small>
-      <span class="tag">Abrir /Ruta.html</span>
-    </a>
+    <section class="grid" aria-label="Entregables de consultoría">
+      <a class="card" href="Ruta.html">
+        <div class="num">01</div>
+        <h2>Ruta de Pauta Digital</h2>
+        <small>
+          Navega la ruta estratégica de medios, objetivos, estructura y lineamientos de pauta digital.
+        </small>
+        <span class="tag">Abrir /Ruta.html</span>
+      </a>
 
-    <a class="card" href="DiagnosticoInicial.html">
-      <div class="num">02</div>
-      <h2>Diagnóstico Inicial</h2>
-      <small>
-        Checklist accionable, hallazgos por KPI, conclusiones y recomendaciones para optimización.
-      </small>
-      <span class="tag">Abrir /DiagnosticoInicial.html</span>
-    </a>
+      <a class="card" href="DiagnosticoInicial.html">
+        <div class="num">02</div>
+        <h2>Diagnóstico Inicial</h2>
+        <small>
+          Checklist accionable, hallazgos por KPI, conclusiones y recomendaciones para optimización.
+        </small>
+        <span class="tag">Abrir /DiagnosticoInicial.html</span>
+      </a>
 
-    <a class="card" href="AuditoriaKeywords.html">
-      <div class="num">03</div>
-      <h2>Auditoría de Keywords</h2>
-      <small>
-        Análisis de palabras clave, validación de términos de búsqueda y dos caminos estratégicos de optimización.
-      </small>
-      <span class="tag">Abrir /AuditoriaKeywords.html</span>
-    </a>
+      <a class="card" href="AuditoriaKeywords.html">
+        <div class="num">03</div>
+        <h2>Auditoría de Keywords</h2>
+        <small>
+          Análisis de palabras clave, validación de términos de búsqueda y caminos estratégicos de optimización.
+        </small>
+        <span class="tag">Abrir /AuditoriaKeywords.html</span>
+      </a>
 
-    <a class="card" href="AuditoriaGTML.html">
-      <div class="num">04</div>
-      <h2>Auditoría General GTM</h2>
-      <small>
-        Informe completo del contenedor GTM: inventario, hallazgos priorizados, plataformas y eventos GA4.
-      </small>
-      <span class="tag">Abrir /AuditoriaGTML.html</span>
-    </a>
+      <a class="card" href="AuditoriaGTML.html">
+        <div class="num">04</div>
+        <h2>Auditoría General GTM</h2>
+        <small>
+          Informe completo del contenedor GTM: inventario, hallazgos priorizados, plataformas y eventos GA4.
+        </small>
+        <span class="tag">Abrir /AuditoriaGTML.html</span>
+      </a>
 
-    <a class="card" href="AuditoriaGTM_PlanAcccion.html">
-      <div class="num">05</div>
-      <h2>Plan de Acción GTM</h2>
-      <small>
-        Diagnóstico ejecutivo, matriz de prioridades, roadmap 30/60/90 y checklist de validación funcional.
-      </small>
-      <span class="tag">Abrir /AuditoriaGTM_PlanAcccion.html</span>
-    </a>
-  </section>
+      <a class="card" href="AuditoriaGTM_PlanAcccion.html">
+        <div class="num">05</div>
+        <h2>Plan de Acción GTM</h2>
+        <small>
+          Diagnóstico ejecutivo, matriz de prioridades, roadmap 30/60/90 y checklist de validación funcional.
+        </small>
+        <span class="tag">Abrir /AuditoriaGTM_PlanAcccion.html</span>
+      </a>
 
-  <div class="footer">Subir este archivo como index.html en la raíz del repositorio.</div>
-</main>
+      <a class="card" href="AuditoriaGA4.html">
+        <div class="num">06</div>
+        <h2>Auditoría GA4</h2>
+        <small>
+          Informe de fuente / medio, purchase, registros, afiliados, atribución y recomendaciones de medición.
+        </small>
+        <span class="tag">Abrir /AuditoriaGA4.html</span>
+      </a>
+    </section>
 
+    <div class="footer">Sitio estático de entregables tipo landing page para YaJuego.</div>
+  </main>
 </body>
 </html>
