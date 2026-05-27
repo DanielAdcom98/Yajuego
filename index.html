@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YaJuego · Hub de Consultoría</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --y:#FFC000;
@@ -14,16 +14,17 @@
   --g2:#282828;
   --g3:#777;
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;}
 body{
   min-height:100vh;
+  font-family:'DM Sans',sans-serif;
   background:var(--b);
   color:var(--w);
   display:flex;
   align-items:center;
   justify-content:center;
   padding:40px;
-  overflow:hidden;
+  overflow:auto;
 }
 .bg-grid{
   position:fixed;
@@ -67,6 +68,7 @@ body{
   background:var(--y);
 }
 h1{
+  font-family:'Syne',sans-serif;
   font-size:clamp(42px,7vw,82px);
   line-height:.92;
   letter-spacing:-.05em;
@@ -93,7 +95,7 @@ p{
   color:var(--w);
   background:rgba(26,26,26,.92);
   border:1px solid var(--g2);
-  border-radius:18px;
+  border-radius:8px;
   padding:28px;
   min-height:220px;
   overflow:hidden;
@@ -118,6 +120,7 @@ p{
 }
 .card:hover:after{transform:scaleX(1);}
 .num{
+  font-family:'Syne',sans-serif;
   color:rgba(255,192,0,.28);
   font-size:44px;
   line-height:1;
@@ -125,6 +128,7 @@ p{
   margin-bottom:18px;
 }
 .card h2{
+  font-family:'Syne',sans-serif;
   font-size:22px;
   line-height:1.15;
   letter-spacing:-.02em;
@@ -171,8 +175,8 @@ p{
   <div class="eyebrow">YaJuego · Consultoría Digital 2026</div>
   <h1>Hub de <span>diagnóstico</span> y ruta digital</h1>
   <p>
-    Acceso rápido a los entregables de consultoría: ruta de pauta digital, diagnóstico inicial 
-    de performance con recomendaciones para Google, Meta y campaña de marca.
+    Acceso rápido a los entregables de consultoría: ruta de pauta digital, diagnóstico inicial, auditorías
+    de performance y medición con recomendaciones para Google, Meta, GTM y campaña de marca.
   </p>
 
   <section class="grid">
@@ -201,6 +205,24 @@ p{
         Análisis de palabras clave, validación de términos de búsqueda y dos caminos estratégicos de optimización.
       </small>
       <span class="tag">Abrir /AuditoriaKeywords.html</span>
+    </a>
+
+    <a class="card" href="AuditoriaGTML.html">
+      <div class="num">04</div>
+      <h2>Auditoría General GTM</h2>
+      <small>
+        Informe completo del contenedor GTM: inventario, hallazgos priorizados, plataformas y eventos GA4.
+      </small>
+      <span class="tag">Abrir /AuditoriaGTML.html</span>
+    </a>
+
+    <a class="card" href="AuditoriaGTM_PlanAcccion.html">
+      <div class="num">05</div>
+      <h2>Plan de Acción GTM</h2>
+      <small>
+        Diagnóstico ejecutivo, matriz de prioridades, roadmap 30/60/90 y checklist de validación funcional.
+      </small>
+      <span class="tag">Abrir /AuditoriaGTM_PlanAcccion.html</span>
     </a>
   </section>
 
