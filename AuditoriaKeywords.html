@@ -5,18 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YaJuego · Auditoría de Keywords</title>
     
-    <!-- Google Fonts Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/site.css">
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <style>
-        * { font-family: 'Poppins', sans-serif; }
+        * { font-family: 'DM Sans', sans-serif; }
         :root {
             --y: #FFC000;
             --b: #111;
@@ -29,6 +26,12 @@
             --gr: #22C55E;
             --pu: #8B5CF6;
             --sidebar: 280px;
+        }
+
+        .sb-brand, .sb-client-name, .sb-num, .sb-total-val, .sb-logo,
+        .hero-title, .hstat-num, .sec-title, .kv, .fn,
+        .chart-title, .strategy-title {
+            font-family: 'Syne', sans-serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -699,21 +702,12 @@
             max-width: 320px;
         }
 
-        .search-container i {
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--g3);
-            font-size: 0.8rem;
-        }
-
         .search-input {
             width: 100%;
             background-color: #0d0d0d;
             border: 1px solid var(--g2);
             border-radius: 6px;
-            padding: 8px 12px 8px 32px;
+            padding: 8px 12px;
             color: var(--w);
             font-size: 12px;
             outline: none;
@@ -763,7 +757,6 @@
 
     <!-- Toast Notification -->
     <div id="toast" class="toast">
-        <i class="fa-solid fa-circle-check"></i>
         <span id="toast-message">Copiado al portapapeles exitosamente</span>
     </div>
 
@@ -858,24 +851,24 @@
 
             <div class="fg" style="margin-top:2rem;">
                 <div class="fc">
-                    <div class="fn" style="color:var(--y);"><i class="fa-solid fa-tag"></i> 1. Promociones / Bonos</div>
+                    <div class="fn" style="color:var(--y);">1. Promociones / Bonos</div>
                     <div class="fd"><strong>CPA: $48,735.89 COP</strong>. Es el canal con menor costo de adquisición. Excelente tasa de conversión y alta eficiencia de presupuesto.</div>
                 </div>
                 <div class="fc">
-                    <div class="fn" style="color:var(--y);"><i class="fa-solid fa-cube"></i> 2. Genérico Apuestas</div>
+                    <div class="fn" style="color:var(--y);">2. Genérico Apuestas</div>
                     <div class="fd"><strong>CPA: $60,651.29 COP</strong>. Gran escala y volumen de nuevos usuarios. El pilar más saludable de prospección orgánica.</div>
                 </div>
                 <div class="fc">
-                    <div class="fn" style="color:var(--y);"><i class="fa-solid fa-registered"></i> 3. Marca Yajuego</div>
+                    <div class="fn" style="color:var(--y);">3. Marca Yajuego</div>
                     <div class="fd"><strong>CPA: $69,365.81 COP</strong>. El mayor volumen absoluto de conversiones (514) pero canibalizado por búsquedas de inicio de sesión de clientes existentes.</div>
                 </div>
                 <div class="fc fc-waste">
-                    <div class="fn" style="color:var(--r);"><i class="fa-solid fa-circle-xmark"></i> Oportunidad de Ahorro</div>
+                    <div class="fn" style="color:var(--r);">Oportunidad de Ahorro</div>
                     <div class="fd">Las campañas de <strong>Competidores (CPA: $83,342.68 COP)</strong> drenan presupuesto. Reasignar a Bonos/Genérico maximizará conversiones.</div>
                 </div>
             </div>
 
-            <h3 class="sec-title" style="font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 1rem;"><i class="fa-solid fa-table-list" style="color:var(--y);"></i> Métricas por Categoría de Búsqueda</h3>
+            <h3 class="sec-title" style="font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 1rem;">Métricas por Categoría de Búsqueda</h3>
             <div class="ktbl-wrap">
                 <table class="ktbl">
                     <thead>
@@ -1093,7 +1086,6 @@
 
             <div class="toolbar">
                 <div class="search-container">
-                    <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="text" id="keywordSearch" class="search-input" placeholder="Buscar palabras clave..." onkeyup="filterKeywordsTable()">
                 </div>
                 <div class="filter-group">
@@ -6207,7 +6199,6 @@
 
             <div class="toolbar">
                 <div class="search-container">
-                    <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="text" id="searchTermSearch" class="search-input" placeholder="Buscar términos reales..." onkeyup="filterSearchTermsTable()">
                 </div>
                 <div class="filter-group">
@@ -11765,12 +11756,12 @@
                 <!-- PATH A -->
                 <div class="strategy-box path-a">
                     <span class="strategy-badge">Opción A</span>
-                    <h3 class="strategy-title"><i class="fa-solid fa-arrows-spin"></i> Concordancia Amplia Protegida</h3>
+                    <h3 class="strategy-title">Concordancia Amplia Protegida</h3>
                     <p style="font-size: 0.82rem; color: var(--g4); line-height: 1.6;">
                         Mantener keywords en concordancia amplia para alimentar el algoritmo de volumen de Google Ads, pero **blindando el presupuesto mediante una estrategia de exclusión con keywords negativas agresiva e integral**.
                     </p>
                     <div style="background: #0d0d0d; border-radius: 8px; padding: 14px; font-size: 0.78rem; border: 1px solid var(--g2);">
-                        <b style="color: var(--y); display: block; margin-bottom: 6px;"><i class="fa-solid fa-clipboard-list"></i> Grupos de Negativas Disponibles:</b>
+                        <b style="color: var(--y); display: block; margin-bottom: 6px;">Grupos de Negativas Disponibles:</b>
                         <ul style="padding-left: 15px; color: var(--g4); display: flex; flex-direction: column; gap: 4px;">
                             <li><b>Login redundante:</b> Evita clics de usuarios ya registrados.</li>
                             <li><b>Términos fuera de lugar:</b> Excluye Luis Díaz, Nequi gratis, etc.</li>
@@ -11778,19 +11769,19 @@
                         </ul>
                     </div>
                     <button class="reco-action-btn" onclick="copyNegatives('all_negatives')" style="background: var(--y); color: #111; border: none; font-weight: 700; width: 100%; justify-content: center; margin-top: auto;">
-                        <i class="fa-solid fa-copy"></i> Copiar Lista Completa de Negativas
+                        Copiar Lista Completa de Negativas
                     </button>
                 </div>
 
                 <!-- PATH B -->
                 <div class="strategy-box path-b">
                     <span class="strategy-badge">Opción B</span>
-                    <h3 class="strategy-title"><i class="fa-solid fa-bullseye"></i> Concordancia Exacta Funcional</h3>
+                    <h3 class="strategy-title">Concordancia Exacta Funcional</h3>
                     <p style="font-size: 0.82rem; color: var(--g4); line-height: 1.6;">
                         Migrar keywords críticas a **Concordancia Exacta**, limitándose estrictamente a **pocas palabras clave funcionales de alta intención comercial (1 a 3 palabras)**. Esto bloquea de raíz todo el tráfico basura.
                     </p>
                     <div style="background: #0d0d0d; border-radius: 8px; padding: 14px; font-size: 0.78rem; border: 1px solid var(--g2);">
-                        <b style="color: var(--gr); display: block; margin-bottom: 6px;"><i class="fa-solid fa-check-double"></i> Criterios del Camino Exacto:</b>
+                        <b style="color: var(--gr); display: block; margin-bottom: 6px;">Criterios del Camino Exacto:</b>
                         <ul style="padding-left: 15px; color: var(--g4); display: flex; flex-direction: column; gap: 4px;">
                             <li>Orientar a marca corta y directa: `[yajuego]`, `[ya juego]`.</li>
                             <li>Términos genéricos de alta intención: `[casino online]`, `[casas de apuestas]`.</li>
@@ -11798,13 +11789,13 @@
                         </ul>
                     </div>
                     <button class="reco-action-btn" onclick="copyExactList()" style="background: var(--gr); color: #111; border: none; font-weight: 700; width: 100%; justify-content: center; margin-top: auto;">
-                        <i class="fa-solid fa-copy"></i> Copiar Exactas Funcionales Sugeridas
+                        Copiar Exactas Funcionales Sugeridas
                     </button>
                 </div>
             </div>
 
             <!-- OPPORTUNITIES -->
-            <h3 class="sec-title" style="font-size: 1.3rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--gr);"><i class="fa-solid fa-square-plus"></i> Nuevas Keywords Cortas y Funcionales (Exact Match)</h3>
+            <h3 class="sec-title" style="font-size: 1.3rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--gr);">Nuevas Keywords Cortas y Funcionales (Exact Match)</h3>
             <p class="sec-desc" style="margin-bottom: 1rem;">
                 Hemos filtrado los términos irrelevantes o marcas de competidores. Estas búsquedas de 1-4 palabras tienen excelente volumen de conversión y CPA muy bajo, ideales para agregar formalmente:
             </p>
@@ -11834,7 +11825,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$39,439.82</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('casas de apuestas')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -11849,7 +11840,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$43,921.38</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('casinos online colombia')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -11864,7 +11855,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$18,883.83</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('bono gratis sin deposito')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -11879,7 +11870,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$29,718.07</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('bono casino')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -11894,7 +11885,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$4,112.78</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('bono yajuego')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -11909,7 +11900,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$20,647.86</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('betano bono de bienvenida')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -11924,7 +11915,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$36,621.46</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('betano apuestas')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -11939,7 +11930,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$18,221.91</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('casas de apuestas deportivas')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -11954,7 +11945,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$35,022.53</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('bono bienvenida')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -11969,7 +11960,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$44,607.12</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('juega ya casino')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -11984,7 +11975,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$17,941.28</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('que es yajuego')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -11999,7 +11990,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$20,296.48</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('bonos gratis sin depósito')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -12014,7 +12005,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$34,623.27</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('bono gratis sin deposito')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -12029,7 +12020,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$44,882.42</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('casa de apuestas colombia')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -12044,7 +12035,7 @@
                             <td class="txt-right" style="font-weight: 700; color: #6ee7b7;">$15,662.00</td>
                             <td class="txt-center">
                                 <button class="reco-action-btn" onclick="copyKeyword('como conseguir dinero')" style="padding: 4px 8px; font-size: 0.72rem;">
-                                    <i class="fa-solid fa-copy"></i>
+                                    Copiar
                                 </button>
                             </td>
                         </tr>
@@ -12054,14 +12045,14 @@
             </div>
 
             <!-- NEGATIVE LISTS WITH SEPARATE BUTTONS -->
-            <h3 class="sec-title" style="font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem; color: var(--r);"><i class="fa-solid fa-ban"></i> Estrategia Temática de Exclusiones (Keywords Negativas)</h3>
+            <h3 class="sec-title" style="font-size: 1.3rem; margin-top: 3rem; margin-bottom: 1rem; color: var(--r);">Estrategia Temática de Exclusiones (Keywords Negativas)</h3>
             <p class="sec-desc" style="margin-bottom: 1.5rem;">
                 Copia las listas temáticas directamente para aplicarlas en la biblioteca compartida o a nivel campaña en Google Ads:
             </p>
             <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                <button class="reco-action-btn" onclick="copyNegatives('login')"><i class="fa-solid fa-copy"></i> 1. Exclusiones de Login / Registro</button>
-                <button class="reco-action-btn" onclick="copyNegatives('irrelevant')"><i class="fa-solid fa-copy"></i> 2. Exclusiones de Temas Irrelevantes</button>
-                <button class="reco-action-btn" onclick="copyNegatives('competitors')"><i class="fa-solid fa-copy"></i> 3. Exclusiones de Competidores Ineficientes</button>
+                <button class="reco-action-btn" onclick="copyNegatives('login')">1. Exclusiones de Login / Registro</button>
+                <button class="reco-action-btn" onclick="copyNegatives('irrelevant')">2. Exclusiones de Temas Irrelevantes</button>
+                <button class="reco-action-btn" onclick="copyNegatives('competitors')">3. Exclusiones de Competidores Ineficientes</button>
             </div>
             
             <div class="ktbl-wrap">
@@ -12491,7 +12482,7 @@
 
         // Chart.js Configuration
         Chart.defaults.color = '#999';
-        Chart.defaults.font.family = 'Poppins';
+        Chart.defaults.font.family = 'DM Sans';
 
         // Chart 1: Spend vs Conversions by Campaign
         const ctxCampaignSpendConv = document.getElementById('chartCampaignSpendConv').getContext('2d');
