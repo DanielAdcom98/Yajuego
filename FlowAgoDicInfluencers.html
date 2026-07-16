@@ -299,6 +299,35 @@
     td strong { color: var(--w); }
     .money { color: var(--y); font-family: "Syne", sans-serif; font-weight: 800; }
     tr.total-row td { background: #1c1c1c; border-top: 1px solid var(--p2); }
+    .monthly-flow th:nth-child(5),
+    .monthly-flow td:nth-child(5) {
+      background: rgba(255, 195, 0, .08);
+      border-left: 1px solid rgba(255, 195, 0, .28);
+      border-right: 1px solid rgba(255, 195, 0, .28);
+    }
+
+    .monthly-flow th:nth-child(5) { background: #ffd24a; }
+    .monthly-flow tr.total-row td { background: #202020; }
+    .monthly-flow tr.total-row td:nth-child(5) { background: rgba(255, 195, 0, .16); }
+
+    .monthly-flow tr.optimization-row td {
+      background: rgba(38, 208, 124, .15);
+      border-top: 1px solid rgba(38, 208, 124, .38);
+    }
+
+    .monthly-flow tr.optimization-row td:nth-child(5) {
+      background: rgba(38, 208, 124, .24);
+    }
+
+    .monthly-flow tr.grand-total-row td {
+      background: rgba(255, 195, 0, .18);
+      border-top: 1px solid rgba(255, 195, 0, .5);
+      border-bottom: 1px solid rgba(255, 195, 0, .5);
+    }
+
+    .monthly-flow tr.grand-total-row td:nth-child(5) {
+      background: rgba(255, 195, 0, .3);
+    }
 
     .mark {
       display: inline-block;
@@ -709,7 +738,7 @@
         </article>
       </div>
       <div class="table-wrap" style="margin-top: 18px;">
-        <table>
+        <table class="monthly-flow">
           <thead>
             <tr>
               <th>Mes</th>
@@ -768,6 +797,22 @@
               <td class="money">$100.0MM</td>
               <td class="money">$204.5MM</td>
               <td>No incluye IVA. Agosto y diciembre son meses parciales (*).</td>
+            </tr>
+            <tr class="total-row optimization-row">
+              <td><strong>Optimizacion 15%</strong></td>
+              <td class="money">$12.0MM</td>
+              <td class="money">$3.7MM</td>
+              <td class="money">$15.0MM</td>
+              <td class="money">$30.7MM</td>
+              <td>Calculado sobre el total de la ventana.</td>
+            </tr>
+            <tr class="total-row grand-total-row">
+              <td><strong>Total + 15%</strong></td>
+              <td class="money">$91.7MM</td>
+              <td class="money">$28.5MM</td>
+              <td class="money">$115.0MM</td>
+              <td class="money">$235.2MM</td>
+              <td>Total ventana con optimizacion incluida. No incluye IVA.</td>
             </tr>
           </tbody>
         </table>
